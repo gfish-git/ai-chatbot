@@ -7,6 +7,7 @@ import { PlusIcon } from '@/components/icons';
 import { SidebarHistory } from '@/components/sidebar-history';
 import { SidebarUserNav } from '@/components/sidebar-user-nav';
 import { Button } from '@/components/ui/button';
+import { AppName } from '@/components/app-name';
 import {
   Sidebar,
   SidebarContent,
@@ -34,9 +35,9 @@ export function AppSidebar({ user }: { user: User | undefined }) {
               }}
               className="flex flex-row gap-3 items-center"
             >
-              <span className="text-lg font-semibold px-2 hover:bg-muted rounded-md cursor-pointer">
-                Chatbot
-              </span>
+              <div className="px-2 hover:bg-muted rounded-md cursor-pointer">
+                <AppName size="small" />
+              </div>
             </Link>
             <Tooltip>
               <TooltipTrigger asChild>
